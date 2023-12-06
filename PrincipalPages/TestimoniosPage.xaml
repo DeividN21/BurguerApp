@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.TestimoniosPage"
+             Title="TestimoniosPage"
+             BackgroundColor="#F5F5F5">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout BackgroundColor="#432616"
+                        Padding="10">
+                <Grid BackgroundColor="#432616"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="90"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Start"
+                           Margin="0,0,10,10"/>
+
+                    <Label Grid.Column="1"
+                           Text="2D BURGUER"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="LightYellow"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="StartAndExpand"
+                           HorizontalTextAlignment="Start"
+                           Margin="10,0,0,10"/>
+                </Grid>
+
+                <!-- Nombre del Usuario -->
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="Username"
+                            Text="Cliente"
+                            VerticalOptions="CenterAndExpand"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+                    <Button Text="Salir"
+                            FontSize="14"
+                            Margin="15,0,10,0"
+                            FontAttributes="Bold"
+                            BackgroundColor="#874421"
+                            Clicked="OnClickLogout"/>
+                </StackLayout>
+
+                <!-- Menu de Opciones -->
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="10"
+                             Margin="0,10,0,0"
+                             BackgroundColor="White">
+                        <Button Text="Inicio"
+                            TextColor="Black"
+                            Clicked="OnClickInicio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+
+                        <Button Text="Acerca de"
+                            TextColor="Black"
+                            Clicked="OnClickAcerca"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Contacto"
+                            TextColor="Black"
+                            Clicked="OnClickContacto"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Menú"
+                            TextColor="Black"
+                            Clicked="OnClickMenu"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Reseñas"
+                            TextColor="Black"
+                            Clicked="OnClickTestimonio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <!-- Sección Sobre Nosotros -->
+            <StackLayout Padding="20"
+                         Spacing="20"
+                         BackgroundColor="#8D4925">
+                <Label Text="¿Qué dicen de nosotros?"
+                       FontSize="40"
+                       FontAttributes="Bold"
+                       TextColor="LightYellow"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+                <Image Source="hamburguesa.jpg"
+                       Aspect="AspectFill"
+                       HeightRequest="250"
+                       WidthRequest="400"/>
+            </StackLayout>
+
+            <!-- Sección Testimonios -->
+            <StackLayout Padding="20"
+                         Spacing="20"
+                         BackgroundColor="#C57D56">
+                <Label Text="TESTIMONIOS"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="LightYellow"
+                       TextDecorations="Underline"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+                <StackLayout Orientation="Vertical"
+                             Spacing="20">
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="120"
+                           WidthRequest="120"/>
+
+                    <StackLayout HorizontalOptions="StartAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+                        <Label Text="Isabel Rodriguez"
+                           FontSize="18"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                        <Label Text=" '' Visité el restaurante con mi familia y todos quedamos encantados. Las hamburguesas son deliciosas, las porciones excelentes y el ambiente es acogedor. Un lugar perfecto para disfrutar de una comida con tus seres queridos.'' "
+                           FontSize="14"
+                           TextColor="Black"
+                           Margin="0,0,0,10"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                             Spacing="20">
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="120"
+                           WidthRequest="120"/>
+
+                    <StackLayout HorizontalOptions="StartAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+                        <Label Text="Francisco Villa"
+                           FontSize="18"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                        <Label Text=" '' Increíble experiencia gastronómica. Probé la Bacon Cheeseburger y quedé impresionada por la calidad de la carne y la mezcla con las tiras de tocino. ¡Definitivamente, mi nuevo lugar favorito para disfrutar de una deliciosa hamburguesa! '' "
+                           FontSize="14"
+                           TextColor="Black"
+                           Margin="0,0,0,10"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                             Spacing="20">
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="120"
+                           WidthRequest="120"/>
+
+                    <StackLayout HorizontalOptions="StartAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+                        <Label Text="Alexandra Narvaez"
+                           FontSize="18"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                        <Label Text=" '' Probé la Hamburguesa Vegetariana y quedé gratamente sorprendida. La mezcla de ingredientes frescos y la textura son increíbles. Incluso mis amigos carnívoros quedaron impresionados. ¡Una opción deliciosa para todos los gustos! '' "
+                           FontSize="14"
+                           TextColor="Black"
+                           Margin="0,0,0,10"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                             Spacing="20">
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="120"
+                           WidthRequest="120"/>
+
+                    <StackLayout HorizontalOptions="StartAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+                        <Label Text="Nicolas Ramirez"
+                           FontSize="18"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,0,0,10"/>
+                        <Label Text=" '' Quedé enamorado de la Hamburguesa BBQ, nunca pensé que una hamburguesa pudiera ser tan exquisita. Además, su presentación es simplemente asombrosa. ¡La recomiendo sin lugar a dudas! '' "
+                           FontSize="14"
+                           TextColor="Black"
+                           Margin="0,0,0,10"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.MainPage"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Encabezado -->
+            <StackLayout BackgroundColor="#432616"
+                         Padding="10">
+                <Grid BackgroundColor="#432616"
+                      VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="90"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Start"
+                           Margin="0,0,10,10"/>
+
+                    <Label Grid.Column="1"
+                           Text="2D BURGUER"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="LightYellow"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center"
+                           Margin="10,0,0,10"/>
+                </Grid>
+
+                <!-- Nombre del Usuario -->
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="Username"
+                            Text="Cliente"
+                            VerticalOptions="CenterAndExpand"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+                    <Button Text="Salir"
+                            FontSize="14"
+                            Margin="15,0,10,0"
+                            FontAttributes="Bold"
+                            BackgroundColor="#874421"
+                            Clicked="OnClickLogout"/>
+                </StackLayout>
+
+                <!-- Menu de Opciones -->
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="10"
+                             Margin="0,10,0,0"
+                             BackgroundColor="White">
+                    <Button Text="Inicio"
+                            TextColor="Black"
+                            Clicked="OnClickInicio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+
+                    <Button Text="Acerca de"
+                            TextColor="Black"
+                            Clicked="OnClickAcerca"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    <Button Text="Contacto"
+                            TextColor="Black"
+                            Clicked="OnClickContacto"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    <Button Text="Menú"
+                            TextColor="Black"
+                            Clicked="OnClickMenu"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    <Button Text="Reseñas"
+                            TextColor="Black"
+                            Clicked="OnClickTestimonio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+
+            <!-- Imagen -->
+            <Image Source="hamburguesa.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="300"/>
+
+            <!-- Otra sección -->
+            <StackLayout Padding="20"
+                         BackgroundColor="#874421">
+                <Label Text="¡Ven y disfruta con nosotros!"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="LightYellow"/>
+                <Label Text="El vasto menú de 2D Burguer está inspirado en los viajes y en el amor por diferentes culturas.Nuestras delicias culinarias contienen ingredientes frescos para que llevarte sabor y calidad a la mesa."
+                       FontSize="14"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,10,0,20"
+                       TextColor="LightYellow"/>
+                <Image Source="logo_burguer.jpg"
+                       Aspect="AspectFill"
+                       HeightRequest="50"
+                       WidthRequest="50"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

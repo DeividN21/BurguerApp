@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.MenuPage"
+             Title="MenuPage"
+             BackgroundColor="#F5F5F5">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout BackgroundColor="#432616"
+                         Padding="10">
+                <Grid BackgroundColor="#432616"
+                      VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="90"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Start"
+                           Margin="0,0,10,10"/>
+
+                    <Label Grid.Column="1"
+                           Text="2D BURGUER"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="LightYellow"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="StartAndExpand"
+                           HorizontalTextAlignment="Start"
+                           Margin="10,0,0,10"/>
+                </Grid>
+
+                <!-- Nombre del Usuario -->
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="Username"
+                            Text="Cliente"
+                            VerticalOptions="CenterAndExpand"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+                    <Button Text="Salir"
+                            FontSize="14"
+                            Margin="15,0,10,0"
+                            FontAttributes="Bold"
+                            BackgroundColor="#874421"
+                            Clicked="OnClickLogout"/>
+                </StackLayout>
+
+                <!-- Menu de Opciones -->
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="10"
+                             Margin="0,10,0,0"
+                             BackgroundColor="White">
+                        <Button Text="Inicio"
+                            TextColor="Black"
+                            Clicked="OnClickInicio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+
+                        <Button Text="Acerca de"
+                            TextColor="Black"
+                            Clicked="OnClickAcerca"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Contacto"
+                            TextColor="Black"
+                            Clicked="OnClickContacto"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Menú"
+                            TextColor="Black"
+                            Clicked="OnClickMenu"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                        <Button Text="Reseñas"
+                            TextColor="Black"
+                            Clicked="OnClickTestimonio"
+                            FontAttributes="Bold"
+                            BackgroundColor="White"
+                            BorderColor="White"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <!-- Menu Principal -->
+            <StackLayout Padding="10"
+                         Spacing="10"
+                         BackgroundColor="#907767">
+                <Label Text="Menú Principal / Combos"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Este menú ofrece una combinación de hamburguesas clásicas, opciones gourmet, acompañamientos deliciosos, una variedad de bebidas y postres tentadores para satisfacer diferentes gustos y preferencias."
+                       TextColor="Black"
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>
+            </StackLayout>
+
+            <StackLayout Padding="20" 
+                         Spacing="10"
+                         BackgroundColor="#C57D56">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Comidas"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout Padding="20" 
+                         Spacing="10"
+                         BackgroundColor="#C57D56">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Combos"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+            </StackLayout>
+
+            <!-- Menu de Opciones -->
+            <ScrollView Orientation="Horizontal"
+                        BackgroundColor="#432616">
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand"
+                             Spacing="10"
+                             Margin="0,0,0,0"
+                             BackgroundColor="#432616"
+                             Padding="10">
+                    <Button Text="Hamburguesas Tradicionales"
+                            TextColor="Black"
+                            Clicked="OnClickHamburguesas"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                    <Button Text="Acompañamientos"
+                            TextColor="Black"
+                            Clicked="OnClickAcompaniamientos"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                    <Button Text="Bebidas"
+                            TextColor="Black"
+                            Clicked="OnClickBebidas"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                    <Button Text="Postres"
+                            TextColor="Black"
+                            Clicked="OnClickPostres"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                    <Button Text="Combos"
+                            TextColor="Black"
+                            Clicked="OnClickCombos"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                    <Button Text="Ver Carrito"
+                            TextColor="Black"
+                            Clicked="OnClickCarrito"
+                            FontAttributes="Bold"
+                            BackgroundColor="Beige"
+                            BorderColor="Black"
+                            BorderWidth="2"/>
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Hamburguesas Tradicionales -->
+            <StackLayout Padding="20" 
+                         Spacing="10"
+                         BackgroundColor="#C57D56">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Hamburguesas Tradicionales"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <Image Source="hamburguesa.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="80"/>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Sumérgete en la esencia de las hamburguesas clásicas donde la calidad se une a la simplicidad para ofrecerte sabores auténticos que deleitarán tu paladar. Cada hamburguesa está cuidadosamente elaborada con ingredientes frescos y jugosa carne, proporcionando esa satisfacción reconfortante que solo una hamburguesa tradicional puede brindar."
+                               FontSize="14"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Acompañamientos -->
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         BackgroundColor="#E8C39E">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Acompañamientos"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <Image Source="hamburguesa.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="80"/>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Nuestros acompañamientos son el complemento perfecto para tu hamburguesa. Desde las clásicas papas fritas hasta las opciones más creativas, cada acompañamiento está pensado para satisfacer tu antojo y realzar tu experiencia culinaria."
+                               FontSize="14"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Bebidas -->
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         BackgroundColor="#C57D56">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Bebidas"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <Image Source="hamburguesa.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="80"/>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Refresca tu experiencia con nuestra variedad de bebidas pensadas para complementar tu comida. Desde refrescos tradicionales hasta opciones más exclusivas, cada bebida está diseñada para satisfacer tu sed y elevar el disfrute de tu comida."
+                               FontSize="14"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Postres -->
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         BackgroundColor="#E8C39E">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Postres"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <Image Source="hamburguesa.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="80"/>
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="CenterAndExpand">
+                        <Label Text="Descubre el dulce final perfecto para tu experiencia gastronómica con nuestra irresistible selección de postres."
+                               FontSize="15"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Combos -->
+            <StackLayout Padding="20"
+                         Spacing="10"
+                         BackgroundColor="#C57D56">
+                <BoxView Color="Black"
+                         HeightRequest="2"/>
+                <Label Text="Combos"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+                <BoxView Color="Black"
+                         HeightRequest="2"
+                         Margin="0,0,0,10"/>
+                <StackLayout Orientation="Horizontal"
+                             Spacing="10">
+                    <Image Source="hamburguesa.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="90"
+                           WidthRequest="80"/>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Nuestros combos incluyen una selección de nuestras mejores hamburguesas, acompañadas de crujientes papas fritas o aros de cebolla y refrescantes bebidas. Perfectos para reunir a la familia alrededor de sabores auténticos y crear recuerdos juntos."
+                               FontSize="15"
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

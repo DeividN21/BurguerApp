@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.LoginPage"
+             BackgroundColor="#F5F5F5">
+    <Frame BackgroundColor="#8B4513"
+           CornerRadius="20"
+           Margin="10">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand"
+                 Spacing="20"
+                 Padding="20">
+            <Image Source="logo.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="150"
+                   WidthRequest="150"/>
+            <TableView >
+                <TableRoot>
+                    <TableSection Title="Ingrese sus credenciales:"
+                                  TextColor="LightYellow">
+                        <EntryCell x:Name="Username"
+                                   Placeholder="Nombre de Usuario"/>
+                        <EntryCell x:Name="Password"
+                                   Placeholder="Contraseña"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Ingresar"
+                    FontSize="15"
+                    Margin="5"
+                    FontAttributes="Bold"
+                    TextColor="LightYellow"
+                    BackgroundColor="#432616"
+                    Clicked="OnClickLogin"/>
+        </StackLayout>
+    </Frame>
+</ContentPage>
