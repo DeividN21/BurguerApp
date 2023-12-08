@@ -1,9 +1,11 @@
 ﻿using BurguerApp.Models;
+using BurguerApp.Services;
 
 namespace BurguerApp.Utils
 {
     public class ListaComidas
     {
+        public APIService apiservice = new APIService();
         public List<Comida> listaComidas = new List<Comida>()
         {
             //HAMBURGUESAS

@@ -7,8 +7,8 @@ namespace BurguerApp.Utils.Catalogos
         public List<CategoriaCombo> categoriasCombo = new List<CategoriaCombo>()
         {
             new CategoriaCombo() { CategoriaId_Combo = 1, Nombre = "Combos Familiares"},
-            new CategoriaCombo() { CategoriaId_Combo = 2, Nombre = "ComboCarrito Individual"},
-            new CategoriaCombo() { CategoriaId_Combo = 3, Nombre = "ComboCarrito Infantil"}
+            new CategoriaCombo() { CategoriaId_Combo = 2, Nombre = "Combos Individuales"},
+            new CategoriaCombo() { CategoriaId_Combo = 3, Nombre = "Combos Infantiles"}
         };
     }
 }

@@ -9,7 +9,7 @@ namespace BurguerApp.Utils
             new Combo
             {
                 ProductoId = 1,
-                Nombre = "ComboCarrito Clásico",
+                Nombre = "Combo Clásico",
                 EstadoComboId = 1,
                 Descripcion = """
                     El combo clásico incluye una hamburguesa con queso,
@@ -21,7 +21,7 @@ namespace BurguerApp.Utils
             new Combo
             {
                 ProductoId = 2,
-                Nombre = "ComboCarrito Para Todos",
+                Nombre = "Combo Para Todos",
                 EstadoComboId = 1,
                 Descripcion = """
                     El Combo "Para Todos" ofrece hamburguesas individuales
@@ -35,7 +35,7 @@ namespace BurguerApp.Utils
             new Combo
             {
                 ProductoId = 3,
-                Nombre = "ComboCarrito Mini Burguer",
+                Nombre = "Combo Mini Burguer",
                 EstadoComboId = 1,
                 Descripcion = """
                     El Combo "Mini Burguer" ofrece una hamburguesa pequeña

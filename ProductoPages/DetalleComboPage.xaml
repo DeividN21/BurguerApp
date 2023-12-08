@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.ProductoPages.DetalleComboPage"
+             Title="DetalleComboPage">
+    <VerticalStackLayout>
+        <Image
+            Source="logo.jpg"
+            HorizontalOptions="Center"
+            HeightRequest="300"/>
+        <Label 
+            x:Name="NombreCombo"
+            Text="NombreCombo"
+            FontSize="32"
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            TextColor="Black"/>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal"
+                         Padding="20"
+                         Spacing="10">
+                <Label Text="Descripcion: "
+                   FontSize="16"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+                <Label x:Name="DescripcionCombo"
+                   Text="DescripcionCombo"
+                   FontSize="16"
+                   TextColor="Black"
+                   HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal"
+                         Padding="20"
+                         Spacing="10">
+                <Label Text="Descuento: $"
+                   FontSize="16"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+                <Label x:Name="Descuento"
+                   Text="Descuento"
+                   FontSize="16"
+                   TextColor="Black"/>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button
+                Text="Regresar"
+                FontSize="20"
+                Margin="10"
+                TextColor="Black"
+                FontAttributes="Bold"
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnClickRegresarMenu"
+                HeightRequest="60"
+                BackgroundColor="LightGreen"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

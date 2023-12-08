@@ -45,5 +45,69 @@ namespace BurguerApp.Services
 
             return null;
         }
+
+        public async Task<List<CategoriaCombo>> ObtenerCategoriaCombo(int idCategoriaCombo)
+        {
+            var response = await _httpClient.GetAsync($"/api/Producto/ObtenerCategoriaComida/{idCategoriaCombo}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<List<CategoriaCombo>>();
+            }
+
+            return null;
+        }
+
+        public async Task<List<Comida>> ObtenerComidas()
+        {
+            var response = await _httpClient.GetAsync("/api/Producto/ObtenerComidas");
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                List<Comida> productos = JsonConvert.DeserializeObject<List<Comida>>(json_response);
+                return productos;
+            }
+            return new List<Comida>();
+
+        }
+
+        public async Task<List<Combo>> ObtenerCombos()
+        {
+            var response = await _httpClient.GetAsync("/api/Producto/ObtenerCombos");
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                List<Combo> productos = JsonConvert.DeserializeObject<List<Combo>>(json_response);
+                return productos;
+            }
+            return new List<Combo>();
+
+        }
+
+        public async Task<List<Comida>> FiltrarComidas(int idCategoriaComida)
+        {
+            var response = await _httpClient.GetAsync($"/api/Producto/FiltrarComidas/{idCategoriaComida}");
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                List<Comida> productos = JsonConvert.DeserializeObject<List<Comida>>(json_response);
+                return productos;
+            }
+            return new List<Comida>();
+
+        }
+
+        public async Task<List<Combo>> FiltrarCombos(int idCategoriaCombo)
+        {
+            var response = await _httpClient.GetAsync($"/api/Producto/FiltrarCombos/{idCategoriaCombo}");
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                List<Combo> productos = JsonConvert.DeserializeObject<List<Combo>>(json_response);
+                return productos;
+            }
+            return new List<Combo>();
+
+        }
     }
 }
